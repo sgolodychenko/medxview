@@ -9,4 +9,4 @@ $ mvn package
 ```
 
 Copy 'xdocreport-gae-demo.war' to Tomcat webapp folder.
-Test URL: http://localhost:8080/xdocreport-gae-demo/
+[localhost url](http://localhost:8080/xdocreport-gae-demo/)
