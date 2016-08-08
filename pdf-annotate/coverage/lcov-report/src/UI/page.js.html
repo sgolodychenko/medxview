@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\UI\page.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/UI/</a> page.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.94% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>91/132</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">29.17% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>14/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.9% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>86/105</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+&nbsp;
+var _slicedToArray = function () { <span class="fstat-no" title="function not covered" >function sliceIterator(arr, i) {</span> <span class="cstat-no" title="statement not covered" >var _arr = []; <span class="cstat-no" title="statement not covered" ></span>var _n = true; <span class="cstat-no" title="statement not covered" ></span>var _d = false; <span class="cstat-no" title="statement not covered" ></span>var _e = undefined; <span class="cstat-no" title="statement not covered" ></span>try { <span class="cstat-no" title="statement not covered" >for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { <span class="cstat-no" title="statement not covered" >_arr.push(_s.value); <span class="cstat-no" title="statement not covered" ></span>if (i &amp;&amp; _arr.length === i) <span class="cstat-no" title="statement not covered" >break; </span></span>} </span>} catch (err) { <span class="cstat-no" title="statement not covered" >_d = true; <span class="cstat-no" title="statement not covered" ></span>_e = err; </span>} finally { <span class="cstat-no" title="statement not covered" >try { <span class="cstat-no" title="statement not covered" >if (!_n &amp;&amp; _i["return"]) <span class="cstat-no" title="statement not covered" >_i["return"](); </span></span>} finally { <span class="cstat-no" title="statement not covered" >if (_d) <span class="cstat-no" title="statement not covered" >throw _e; </span></span>} </span>} <span class="cstat-no" title="statement not covered" ></span>return _arr; </span>} return function (arr, i) { <span class="missing-if-branch" title="else path not taken" >E</span>if (Array.isArray(arr)) { return arr; } else <span class="cstat-no" title="statement not covered" >if (Symbol.iterator in Object(arr)) { <span class="cstat-no" title="statement not covered" >return sliceIterator(arr, i); </span>} else { <span class="cstat-no" title="statement not covered" >throw new TypeError("Invalid attempt to destructure non-iterable instance"); </span>} </span>}; }();
+&nbsp;
+exports.createPage = createPage;
+exports.renderPage = renderPage;
+&nbsp;
+var _PDFJSAnnotate = require('../PDFJSAnnotate');
+&nbsp;
+var _PDFJSAnnotate2 = _interopRequireDefault(_PDFJSAnnotate);
+&nbsp;
+var _renderScreenReaderHints = require('../a11y/renderScreenReaderHints');
+&nbsp;
+var _renderScreenReaderHints2 = _interopRequireDefault(_renderScreenReaderHints);
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : <span class="branch-1 cbranch-no" title="branch not covered" >{ default: obj };</span> }
+&nbsp;
+// Template for creating a new page
+var PAGE_TEMPLATE = '\n  &lt;div style="visibility: hidden;" class="page" data-loaded="false"&gt;\n    &lt;div class="canvasWrapper"&gt;\n      &lt;canvas&gt;&lt;/canvas&gt;\n    &lt;/div&gt;\n    &lt;svg class="annotationLayer"&gt;&lt;/svg&gt;\n    &lt;div class="textLayer"&gt;&lt;/div&gt;\n  &lt;/div&gt;\n';
+&nbsp;
+/**
+ * Create a new page to be appended to the DOM.
+ *
+ * @param {Number} pageNumber The page number that is being created
+ * @return {HTMLElement}
+ */
+function createPage(pageNumber) {
+  var temp = document.createElement('div');
+  temp.innerHTML = PAGE_TEMPLATE;
+&nbsp;
+  var page = temp.children[0];
+  var canvas = page.querySelector('canvas');
+&nbsp;
+  page.setAttribute('id', 'pageContainer' + pageNumber);
+  page.setAttribute('data-page-number', pageNumber);
+&nbsp;
+  canvas.mozOpaque = true;
+  canvas.setAttribute('id', 'page' + pageNumber);
+&nbsp;
+  return page;
+}
+&nbsp;
+/**
+ * Render a page that has already been created.
+ *
+ * @param {Number} pageNumber The page number to be rendered
+ * @param {Object} renderOptions The options for rendering
+ * @return {Promise} Settled once rendering has completed
+ *  A settled Promise will be either:
+ *    - fulfilled: [pdfPage, annotations]
+ *    - rejected: Error
+ */
+function renderPage(pageNumber, renderOptions) {
+  var documentId = renderOptions.documentId;
+  var pdfDocument = renderOptions.pdfDocument;
+  var scale = renderOptions.scale;
+  var rotate = renderOptions.rotate;
+&nbsp;
+  // Load the page and annotations
+&nbsp;
+  return Promise.all([pdfDocument.getPage(pageNumber), _PDFJSAnnotate2.default.getAnnotations(documentId, pageNumber)]).then(function (_ref) {
+    var _ref2 = _slicedToArray(_ref, 2);
+&nbsp;
+    var pdfPage = _ref2[0];
+    var annotations = _ref2[1];
+&nbsp;
+    var page = document.getElementById('pageContainer' + pageNumber);
+    var svg = page.querySelector('.annotationLayer');
+    var canvas = page.querySelector('.canvasWrapper canvas');
+    var canvasContext = canvas.getContext('2d', { alpha: false });
+    var viewport = pdfPage.getViewport(scale, rotate);
+    var transform = scalePage(pageNumber, viewport, canvasContext);
+&nbsp;
+    // Render the page
+    return Promise.all([pdfPage.render({ canvasContext: canvasContext, viewport: viewport, transform: transform }), _PDFJSAnnotate2.default.render(svg, viewport, annotations)]).then(function () {
+      // Text content is needed for a11y, but is also necessary for creating
+      // highlight and strikeout annotations which require selecting text.
+      return pdfPage.getTextContent({ normalizeWhitespace: true }).then(function (textContent) {
+        return new Promise(function (resolve, reject) {
+          // Render text layer for a11y of text content
+          var textLayer = page.querySelector('.textLayer');
+          var textLayerFactory = new PDFJS.DefaultTextLayerFactory();
+          var textLayerBuilder = textLayerFactory.createTextLayerBuilder(textLayer, pageNumber - 1, viewport);
+          textLayerBuilder.setTextContent(textContent);
+          textLayerBuilder.render();
+&nbsp;
+          // Enable a11y for annotations
+          // Timeout is needed to wait for `textLayerBuilder.render`
+          setTimeout(function () {
+            try {
+              (0, _renderScreenReaderHints2.default)(annotations.annotations);
+              resolve();
+            } catch (e) {
+<span class="cstat-no" title="statement not covered" >              reject(e);</span>
+            }
+          });
+        });
+      });
+    }).then(function () {
+      // Indicate that the page was loaded
+      page.setAttribute('data-loaded', 'true');
+&nbsp;
+      return [pdfPage, annotations];
+    });
+  });
+}
+&nbsp;
+/**
+ * Scale the elements of a page.
+ *
+ * @param {Number} pageNumber The page number to be scaled
+ * @param {Object} viewport The viewport of the PDF page (see pdfPage.getViewport(scale, rotate))
+ * @param {Object} context The canvas context that the PDF page is rendered to
+ * @return {Array} The transform data for rendering the PDF page
+ */
+function scalePage(pageNumber, viewport, context) {
+  var page = document.getElementById('pageContainer' + pageNumber);
+  var canvas = page.querySelector('.canvasWrapper canvas');
+  var svg = page.querySelector('.annotationLayer');
+  var wrapper = page.querySelector('.canvasWrapper');
+  var textLayer = page.querySelector('.textLayer');
+  var outputScale = getOutputScale(context);
+  var transform = !outputScale.scaled ? null : <span class="branch-1 cbranch-no" title="branch not covered" >[outputScale.sx, 0, 0, outputScale.sy, 0, 0];</span>
+  var sfx = approximateFraction(outputScale.sx);
+  var sfy = approximateFraction(outputScale.sy);
+&nbsp;
+  // Adjust width/height for scale
+  page.style.visibility = '';
+  canvas.width = roundToDivide(viewport.width * outputScale.sx, sfx[0]);
+  canvas.height = roundToDivide(viewport.height * outputScale.sy, sfy[0]);
+  canvas.style.width = roundToDivide(viewport.width, sfx[1]) + 'px';
+  canvas.style.height = roundToDivide(viewport.height, sfx[1]) + 'px';
+  svg.setAttribute('width', viewport.width);
+  svg.setAttribute('height', viewport.height);
+  svg.style.width = viewport.width + 'px';
+  svg.style.height = viewport.height + 'px';
+  page.style.width = viewport.width + 'px';
+  page.style.height = viewport.height + 'px';
+  wrapper.style.width = viewport.width + 'px';
+  wrapper.style.height = viewport.height + 'px';
+  textLayer.style.width = viewport.width + 'px';
+  textLayer.style.height = viewport.height + 'px';
+&nbsp;
+  return transform;
+}
+&nbsp;
+/**
+ * Approximates a float number as a fraction using Farey sequence (max order of 8).
+ *
+ * @param {Number} x Positive float number
+ * @return {Array} Estimated fraction: the first array item is a numerator,
+ *                 the second one is a denominator.
+ */
+function approximateFraction(x) {
+  // Fast path for int numbers or their inversions.
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (Math.floor(x) === x) {
+    return [x, 1];
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var xinv = 1 / x;</span>
+<span class="cstat-no" title="statement not covered" >  var limit = 8;</span>
+<span class="cstat-no" title="statement not covered" >  if (xinv &gt; limit) {</span>
+<span class="cstat-no" title="statement not covered" >    return [1, limit];</span>
+  } else <span class="cstat-no" title="statement not covered" >if (Math.floor(xinv) === xinv) {</span>
+<span class="cstat-no" title="statement not covered" >    return [1, xinv];</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var x_ = x &gt; 1 ? xinv : x;</span>
+&nbsp;
+  // a/b and c/d are neighbours in Farey sequence.
+<span class="cstat-no" title="statement not covered" >  var a = 0,</span>
+      b = 1,
+      c = 1,
+      d = 1;
+&nbsp;
+  // Limit search to order 8.
+<span class="cstat-no" title="statement not covered" >  while (true) {</span>
+    // Generating next term in sequence (order of q).
+<span class="cstat-no" title="statement not covered" >    var p = a + c,</span>
+        q = b + d;
+<span class="cstat-no" title="statement not covered" >    if (q &gt; limit) {</span>
+<span class="cstat-no" title="statement not covered" >      break;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (x_ &lt;= p / q) {</span>
+<span class="cstat-no" title="statement not covered" >      c = p;<span class="cstat-no" title="statement not covered" >d</span> = q;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      a = p;<span class="cstat-no" title="statement not covered" >b</span> = q;</span>
+    }
+  }
+&nbsp;
+  // Select closest of neighbours to x.
+<span class="cstat-no" title="statement not covered" >  if (x_ - a / b &lt; c / d - x_) {</span>
+<span class="cstat-no" title="statement not covered" >    return x_ === x ? [a, b] : [b, a];</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    return x_ === x ? [c, d] : [d, c];</span>
+  }
+}
+&nbsp;
+function getOutputScale(ctx) {
+  var devicePixelRatio = window.devicePixelRatio || <span class="branch-1 cbranch-no" title="branch not covered" >1;</span>
+  var backingStoreRatio = ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1;
+  var pixelRatio = devicePixelRatio / backingStoreRatio;
+  return {
+    sx: pixelRatio,
+    sy: pixelRatio,
+    scaled: pixelRatio !== 1
+  };
+}
+&nbsp;
+function roundToDivide(x, div) {
+  var r = x % div;
+  return r === 0 ? x : <span class="branch-1 cbranch-no" title="branch not covered" >Math.round(x - r + div);</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jul 30 2016 18:16:54 GMT+0300 (FLE Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

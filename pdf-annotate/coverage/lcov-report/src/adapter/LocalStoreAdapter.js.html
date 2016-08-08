@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\adapter\LocalStoreAdapter.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/adapter/</a> LocalStoreAdapter.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.47% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>65/85</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.35% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>19/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.08% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>19/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.03% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>57/74</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+&nbsp;
+var _uuid = require('../utils/uuid');
+&nbsp;
+var _uuid2 = _interopRequireDefault(_uuid);
+&nbsp;
+var _StoreAdapter2 = require('./StoreAdapter');
+&nbsp;
+var _StoreAdapter3 = _interopRequireDefault(_StoreAdapter2);
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : <span class="branch-1 cbranch-no" title="branch not covered" >{ default: obj };</span> }
+&nbsp;
+function _classCallCheck(instance, Constructor) { <span class="missing-if-branch" title="if path not taken" >I</span>if (!(instance instanceof Constructor)) { <span class="cstat-no" title="statement not covered" >throw new TypeError("Cannot call a class as a function"); </span>} }
+&nbsp;
+function _possibleConstructorReturn(self, call) { <span class="missing-if-branch" title="if path not taken" >I</span>if (!self) { <span class="cstat-no" title="statement not covered" >throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); </span>} return call &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >typeof call === "object" </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >typeof call === "function")</span> ? <span class="branch-0 cbranch-no" title="branch not covered" >call </span>: self; }
+&nbsp;
+function _inherits(subClass, superClass) { <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof superClass !== "function" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >superClass !== null)</span> { <span class="cstat-no" title="statement not covered" >throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); </span>} subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); <span class="missing-if-branch" title="else path not taken" >E</span>if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : <span class="branch-1 cbranch-no" title="branch not covered" >subClass.__proto__ = superClass;</span> }
+&nbsp;
+// StoreAdapter for working with localStorage
+// This is ideal for testing, examples, and prototyping
+var LocalStoreAdapter = function (_StoreAdapter) {
+  _inherits(LocalStoreAdapter, _StoreAdapter);
+&nbsp;
+  function LocalStoreAdapter() {
+    _classCallCheck(this, LocalStoreAdapter);
+&nbsp;
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(LocalStoreAdapter).call(this, {
+      getAnnotations: <span class="fstat-no" title="function not covered" >function getAnnotations(documentId, pageNumber) {</span>
+<span class="cstat-no" title="statement not covered" >        return new Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject) {</span></span>
+<span class="cstat-no" title="statement not covered" >          var annotations = _getAnnotations(documentId).filter(<span class="fstat-no" title="function not covered" >function (i) {</span></span>
+<span class="cstat-no" title="statement not covered" >            return i.page === pageNumber &amp;&amp; i.class === 'Annotation';</span>
+          });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          resolve({</span>
+            documentId: documentId,
+            pageNumber: pageNumber,
+            annotations: annotations
+          });
+        });
+      },
+      getAnnotation: <span class="fstat-no" title="function not covered" >function getAnnotation(documentId, annotationId) {</span>
+<span class="cstat-no" title="statement not covered" >        return Promise.resolve(_getAnnotations(documentId)[findAnnotation(documentId, annotationId)]);</span>
+      },
+      addAnnotation: function addAnnotation(documentId, pageNumber, annotation) {
+        return new Promise(function (resolve, reject) {
+          annotation.class = 'Annotation';
+          annotation.uuid = (0, _uuid2.default)();
+          annotation.page = pageNumber;
+&nbsp;
+          var annotations = _getAnnotations(documentId);
+          annotations.push(annotation);
+          updateAnnotations(documentId, annotations);
+&nbsp;
+          resolve(annotation);
+        });
+      },
+      editAnnotation: function editAnnotation(documentId, annotationId, annotation) {
+        return new Promise(function (resolve, reject) {
+          var annotations = _getAnnotations(documentId);
+          annotations[findAnnotation(documentId, annotationId)] = annotation;
+          updateAnnotations(documentId, annotations);
+&nbsp;
+          resolve(annotation);
+        });
+      },
+      deleteAnnotation: function deleteAnnotation(documentId, annotationId) {
+        return new Promise(function (resolve, reject) {
+          var index = findAnnotation(documentId, annotationId);
+          <span class="missing-if-branch" title="if path not taken" >I</span>if (index &gt; -1) {
+<span class="cstat-no" title="statement not covered" >            var annotations = _getAnnotations(documentId);</span>
+<span class="cstat-no" title="statement not covered" >            annotations.splice(index, 1);</span>
+<span class="cstat-no" title="statement not covered" >            updateAnnotations(documentId, annotations);</span>
+          }
+&nbsp;
+          resolve(true);
+        });
+      },
+      getComments: <span class="fstat-no" title="function not covered" >function getComments(documentId, annotationId) {</span>
+<span class="cstat-no" title="statement not covered" >        return new Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject) {</span></span>
+<span class="cstat-no" title="statement not covered" >          resolve(_getAnnotations(documentId).filter(<span class="fstat-no" title="function not covered" >function (i) {</span></span>
+<span class="cstat-no" title="statement not covered" >            return i.class === 'Comment' &amp;&amp; i.annotation === annotationId;</span>
+          }));
+        });
+      },
+      addComment: function addComment(documentId, annotationId, content) {
+        return new Promise(function (resolve, reject) {
+          var comment = {
+            class: 'Comment',
+            uuid: (0, _uuid2.default)(),
+            annotation: annotationId,
+            content: content
+          };
+&nbsp;
+          var annotations = _getAnnotations(documentId);
+          annotations.push(comment);
+          updateAnnotations(documentId, annotations);
+&nbsp;
+          resolve(comment);
+        });
+      },
+      deleteComment: function deleteComment(documentId, commentId) {
+        return new Promise(function (resolve, reject) {
+          _getAnnotations(documentId);
+          var index = -1;
+          var annotations = _getAnnotations(documentId);
+          for (var i = 0, l = annotations.length; i &lt; l; i++) {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (annotations[i].uuid === commentId) {
+<span class="cstat-no" title="statement not covered" >              index = i;</span>
+<span class="cstat-no" title="statement not covered" >              break;</span>
+            }
+          }
+&nbsp;
+          <span class="missing-if-branch" title="if path not taken" >I</span>if (index &gt; -1) {
+<span class="cstat-no" title="statement not covered" >            annotations.splice(index, 1);</span>
+<span class="cstat-no" title="statement not covered" >            updateAnnotations(documentId, annotations);</span>
+          }
+&nbsp;
+          resolve(true);
+        });
+      }
+    }));
+  }
+&nbsp;
+  return LocalStoreAdapter;
+}(_StoreAdapter3.default);
+&nbsp;
+exports.default = LocalStoreAdapter;
+&nbsp;
+&nbsp;
+function _getAnnotations(documentId) {
+  return JSON.parse(localStorage.getItem(documentId + '/annotations')) || [];
+}
+&nbsp;
+function updateAnnotations(documentId, annotations) {
+  localStorage.setItem(documentId + '/annotations', JSON.stringify(annotations));
+}
+&nbsp;
+function findAnnotation(documentId, annotationId) {
+  var index = -1;
+  var annotations = _getAnnotations(documentId);
+  for (var i = 0, l = annotations.length; i &lt; l; i++) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (annotations[i].uuid === annotationId) {
+<span class="cstat-no" title="statement not covered" >      index = i;</span>
+<span class="cstat-no" title="statement not covered" >      break;</span>
+    }
+  }
+  return index;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jul 30 2016 18:16:54 GMT+0300 (FLE Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

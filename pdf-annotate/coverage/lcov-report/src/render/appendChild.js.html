@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\render\appendChild.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/render/</a> appendChild.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.6% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>59/86</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>20/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.24% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>58/85</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">78×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = appendChild;
+&nbsp;
+var _objectAssign = require('object-assign');
+&nbsp;
+var _objectAssign2 = _interopRequireDefault(_objectAssign);
+&nbsp;
+var _renderLine = require('./renderLine');
+&nbsp;
+var _renderLine2 = _interopRequireDefault(_renderLine);
+&nbsp;
+var _renderPath = require('./renderPath');
+&nbsp;
+var _renderPath2 = _interopRequireDefault(_renderPath);
+&nbsp;
+var _renderPoint = require('./renderPoint');
+&nbsp;
+var _renderPoint2 = _interopRequireDefault(_renderPoint);
+&nbsp;
+var _renderRect = require('./renderRect');
+&nbsp;
+var _renderRect2 = _interopRequireDefault(_renderRect);
+&nbsp;
+var _renderText = require('./renderText');
+&nbsp;
+var _renderText2 = _interopRequireDefault(_renderText);
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { default: obj }; }
+&nbsp;
+var isFirefox = /firefox/i.test(navigator.userAgent);
+&nbsp;
+/**
+ * Get the x/y translation to be used for transforming the annotations
+ * based on the rotation of the viewport.
+ *
+ * @param {Object} viewport The viewport data from the page
+ * @return {Object}
+ */
+function getTranslation(viewport) {
+  var x = void 0;
+  var y = void 0;
+&nbsp;
+  // Modulus 360 on the rotation so that we only
+  // have to worry about four possible values.
+  switch (viewport.rotation % 360) {
+    case 0:
+      x = y = 0;
+      break;
+    case 90:
+      x = 0;
+      y = viewport.width / viewport.scale * -1;
+      break;
+    case 180:
+      x = viewport.width / viewport.scale * -1;
+      y = viewport.height / viewport.scale * -1;
+      break;
+    case 270:
+      x = viewport.height / viewport.scale * -1;
+      y = 0;
+      break;
+  }
+&nbsp;
+  return { x: x, y: y };
+}
+&nbsp;
+/**
+ * Transform the rotation and scale of a node using SVG's native transform attribute.
+ *
+ * @param {Node} node The node to be transformed
+ * @param {Object} viewport The page's viewport data
+ * @return {Node}
+ */
+function transform(node, viewport) {
+  var trans = getTranslation(viewport);
+&nbsp;
+  // Let SVG natively transform the element
+  node.setAttribute('transform', 'scale(' + viewport.scale + ') rotate(' + viewport.rotation + ') translate(' + trans.x + ', ' + trans.y + ')');
+&nbsp;
+  // Manually adjust x/y for nested SVG nodes
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!isFirefox &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >node.nodeName.toLowerCase() === 'svg')</span> {
+<span class="cstat-no" title="statement not covered" >    node.setAttribute('x', parseInt(node.getAttribute('x'), 10) * viewport.scale);</span>
+<span class="cstat-no" title="statement not covered" >    node.setAttribute('y', parseInt(node.getAttribute('y'), 10) * viewport.scale);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var x = parseInt(node.getAttribute('x', 10));</span>
+<span class="cstat-no" title="statement not covered" >    var y = parseInt(node.getAttribute('y', 10));</span>
+<span class="cstat-no" title="statement not covered" >    var width = parseInt(node.getAttribute('width'), 10);</span>
+<span class="cstat-no" title="statement not covered" >    var height = parseInt(node.getAttribute('height'), 10);</span>
+<span class="cstat-no" title="statement not covered" >    var path = node.querySelector('path');</span>
+<span class="cstat-no" title="statement not covered" >    var svg = path.parentNode;</span>
+&nbsp;
+    // Scale width/height
+<span class="cstat-no" title="statement not covered" >    [node, svg, path, node.querySelector('rect')].forEach(<span class="fstat-no" title="function not covered" >function (n) {</span></span>
+<span class="cstat-no" title="statement not covered" >      n.setAttribute('width', parseInt(n.getAttribute('width'), 10) * viewport.scale);</span>
+<span class="cstat-no" title="statement not covered" >      n.setAttribute('height', parseInt(n.getAttribute('height'), 10) * viewport.scale);</span>
+    });
+&nbsp;
+    // Transform path but keep scale at 100% since it will be handled natively
+<span class="cstat-no" title="statement not covered" >    transform(path, (0, _objectAssign2.default)({}, viewport, { scale: 1 }));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    switch (viewport.rotation % 360) {</span>
+      case 90:
+<span class="cstat-no" title="statement not covered" >        node.setAttribute('x', viewport.width - y - width);</span>
+<span class="cstat-no" title="statement not covered" >        node.setAttribute('y', x);</span>
+<span class="cstat-no" title="statement not covered" >        svg.setAttribute('x', 1);</span>
+<span class="cstat-no" title="statement not covered" >        svg.setAttribute('y', 0);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 180:
+<span class="cstat-no" title="statement not covered" >        node.setAttribute('x', viewport.width - x - width);</span>
+<span class="cstat-no" title="statement not covered" >        node.setAttribute('y', viewport.height - y - height);</span>
+<span class="cstat-no" title="statement not covered" >        svg.setAttribute('y', 2);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 270:
+<span class="cstat-no" title="statement not covered" >        node.setAttribute('x', y);</span>
+<span class="cstat-no" title="statement not covered" >        node.setAttribute('y', viewport.height - x - height);</span>
+<span class="cstat-no" title="statement not covered" >        svg.setAttribute('x', -1);</span>
+<span class="cstat-no" title="statement not covered" >        svg.setAttribute('y', 0);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+    }
+  }
+&nbsp;
+  return node;
+}
+&nbsp;
+/**
+ * Append an annotation as a child of an SVG.
+ *
+ * @param {SVGElement} svg The SVG element to append the annotation to
+ * @param {Object} annotation The annotation definition to render and append
+ * @param {Object} viewport The page's viewport data
+ * @return {SVGElement} A node that was created and appended by this function
+ */
+function appendChild(svg, annotation, viewport) {
+  if (!viewport) {
+    viewport = JSON.parse(svg.getAttribute('data-pdf-annotate-viewport'));
+  }
+&nbsp;
+  var child = void 0;
+  switch (annotation.type) {
+    case 'area':
+    case 'highlight':
+      child = (0, _renderRect2.default)(annotation);
+      break;
+    case 'strikeout':
+      child = (0, _renderLine2.default)(annotation);
+      break;
+    case 'point':
+      child = (0, _renderPoint2.default)(annotation);
+      break;
+    case 'textbox':
+      child = (0, _renderText2.default)(annotation);
+      break;
+    case 'drawing':
+      child = (0, _renderPath2.default)(annotation);
+      break;
+  }
+&nbsp;
+  // If no type was provided for an annotation it will result in node being null.
+  // Skip appending/transforming if node doesn't exist.
+  if (child) {
+    // Set attributes
+    child.setAttribute('data-pdf-annotate-id', annotation.uuid);
+    child.setAttribute('data-pdf-annotate-type', annotation.type);
+    child.setAttribute('aria-hidden', true);
+&nbsp;
+    svg.appendChild(transform(child, viewport));
+  }
+&nbsp;
+  return child;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jul 30 2016 18:16:54 GMT+0300 (FLE Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
