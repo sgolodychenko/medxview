@@ -38,6 +38,8 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>jodconverter-core</artifactId>
       <version>${project.version}</version>
+      <scope>system</scope>
+      <systemPath>D:/Projects/Delk/sources/medxview/jodconverter/jodconverter-sample-webapp/lib/jodconverter-core-3.0-SNAPSHOT.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>
