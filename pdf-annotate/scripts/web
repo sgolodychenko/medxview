@@ -1,6 +1,6 @@
 #!/bin/bash
 
-npm ./scripts/shared
+./scripts/shared
 cp -rf shared/ web/shared/
 
 server=./node_modules/.bin/webpack-dev-server

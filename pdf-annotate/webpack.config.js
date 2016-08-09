@@ -12,7 +12,7 @@ if (process.env.MINIFY) {
 module.exports = {
   devtool: 'source-map',
   plugins: plugins,
-  entry: './index.js',
+  entry: ['./index.js', './web/index.js'],
   output: {
     filename: 'dist/' + fileName + '.js',
     library: 'PDFAnnotate',
@@ -26,7 +26,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
-          plugins: ['add-module-exports']
+          plugins: ['add-module-exports', 'transform-object-assign']
         }
       }
     ]
