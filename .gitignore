@@ -1,3 +1,7 @@
 xdocreport/.idea/
 pdf-annotate/.idea/
 pdf-annotate/node_modules/
+jodconverter/.idea/
+jodconverter/jodconverter-core/.idea/
+jodconverter/jodconverter-core/target/
+jodconverter/jodconverter-sample-webapp/.idea/
