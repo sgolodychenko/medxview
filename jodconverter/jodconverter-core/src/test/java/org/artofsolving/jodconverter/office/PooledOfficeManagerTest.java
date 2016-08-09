@@ -12,25 +12,13 @@
 //
 package org.artofsolving.jodconverter.office;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
+import org.artofsolving.jodconverter.ReflectionUtils;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.TimeoutException;
 
-
-import org.artofsolving.jodconverter.ReflectionUtils;
-import org.artofsolving.jodconverter.office.ManagedOfficeProcess;
-import org.artofsolving.jodconverter.office.PooledOfficeManager;
-import org.artofsolving.jodconverter.office.PooledOfficeManagerSettings;
-import org.artofsolving.jodconverter.office.OfficeConnection;
-import org.artofsolving.jodconverter.office.UnoUrl;
-import org.artofsolving.jodconverter.office.OfficeException;
-import org.artofsolving.jodconverter.office.OfficeProcess;
-import org.testng.annotations.Test;
+import static org.testng.Assert.*;
 
 @Test(groups="integration")
 public class PooledOfficeManagerTest {
