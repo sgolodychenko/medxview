@@ -3,6 +3,15 @@
 [![build status](https://img.shields.io/travis/mzabriskie/pdf-annotate.js.svg?style=flat-square)](https://travis-ci.org/mzabriskie/pdf-annotate.js)
 [![code coverage](https://img.shields.io/coveralls/mzabriskie/pdf-annotate.js.svg?style=flat-square)](https://coveralls.io/r/mzabriskie/pdf-annotate.js)
 
+## Requirements:
+1. Install Node js - https://nodejs.org/en/download/
+2. Install dependencies:
+```bash
+$ npm install
+$ npm install webpack -g
+$ webpack
+```
+
 Annotation layer for [pdf.js](https://github.com/mozilla/pdf.js)
 
 ## Developing
