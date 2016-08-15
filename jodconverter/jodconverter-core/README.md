@@ -8,6 +8,7 @@ soffice "-accept=socket,host=0,port=2002;urp;" -nofirststartwizard
 # Usefull commands:
 soffice -unaccept=all
 soffice -headless -accept=socket,host=0,port=2002;urp; -nofirststartwizard
+soffice -accept=socket,host=0,port=2002;urp;StarOffice.ServiceManager
 ```
 2. Download [Hyperic-Sigar](http://kent.dl.sourceforge.net/project/sigar/sigar/1.6/hyperic-sigar-1.6.4.zip) for tests passing.
 3. Unzip and add path to Environment Variable - Path (for e.g. - D:\Projects\Delk\sources\medxview\jodconverter\hyperic-sigar-1.6.4\sigar-bin\lib)
