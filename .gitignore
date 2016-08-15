@@ -7,3 +7,6 @@ jodconverter/jodconverter-core/target/
 jodconverter/jodconverter-sample-webapp/.idea/
 jodconverter/hyperic-sigar-1.6.4/
 jodconverter/jodconverter-sample-webapp/target/
+jodconverter/jodconverter-web-service/.idea/
+converter-services/.idea/
+converter-services/target/
