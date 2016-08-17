@@ -10,3 +10,6 @@ jodconverter/jodconverter-sample-webapp/target/
 jodconverter/jodconverter-web-service/.idea/
 converter-services/.idea/
 converter-services/target/
+web-service/.idea/
+web-service/target/
+jodconverter/jodconverter-web-service/target/
