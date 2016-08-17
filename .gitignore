@@ -13,3 +13,4 @@ converter-services/target/
 web-service/.idea/
 web-service/target/
 jodconverter/jodconverter-web-service/target/
+delme/web-service/target/**
