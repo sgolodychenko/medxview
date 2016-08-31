@@ -1,13 +1,12 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: ['./web/index.js', 'babel-polyfill'],
+  entry: ['./web/index.js'],
   output: {
     filename: 'index.js',
     path: 'web/__build__',
     publicPath: '/__build__/'
   },
-
   module: {
     loaders: [
       {

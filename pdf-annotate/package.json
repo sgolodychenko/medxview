@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start --single-run",
-    "start": "./scripts/web",
-    "build": "webpack && MINIFY=1 webpack",
+    "start": "npm run start-web",
+    "start-web": "webpack-dev-server",
+    "build": "webpack",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
