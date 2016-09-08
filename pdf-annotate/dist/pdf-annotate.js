@@ -1285,7 +1285,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function LocalStoreAdapter() {
 	    _classCallCheck(this, LocalStoreAdapter);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(LocalStoreAdapter).call(this, {
+	    return _possibleConstructorReturn(this, (LocalStoreAdapter.__proto__ || Object.getPrototypeOf(LocalStoreAdapter)).call(this, {
 	      getAnnotations: function getAnnotations(documentId, pageNumber) {
 	        return new Promise(function (resolve, reject) {
 	          var annotations = _getAnnotations(documentId).filter(function (i) {

@@ -1,13 +1,15 @@
 {
   "name": "pdf-annotate.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Annotation layer for pdf.js",
   "main": "index.js",
   "scripts": {
     "test": "karma start --single-run",
-    "start": "npm run start-web",
-    "start-web": "webpack-dev-server",
-    "build": "webpack",
+    "start": "npm run start-web-copy && npm run start-web",
+    "start-web": "webpack-dev-server --host 0.0.0.0  --inline --config webpack.web.js --content-base web/",
+    "start-web-copy": "copy shared\\* web\\shared /y",
+    "build": "npm run build-web",
+    "build-web": "webpack --config webpack.web.js",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
