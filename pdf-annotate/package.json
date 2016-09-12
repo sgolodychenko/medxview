@@ -6,9 +6,9 @@
   "scripts": {
     "test": "karma start --single-run",
     "start": "npm run start-web-copy && npm run start-web",
-    "start-web": "webpack-dev-server --host 0.0.0.0  --inline --config webpack.web.js --content-base web/",
+    "start-web": "webpack-dev-server --inline --config webpack.web.js --content-base web/",
     "start-web-copy": "copy shared\\* web\\shared /y",
-    "build": "npm run build-web",
+    "build": "webpack && npm run build-web",
     "build-web": "webpack --config webpack.web.js",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
