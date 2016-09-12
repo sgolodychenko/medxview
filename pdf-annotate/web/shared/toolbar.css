@@ -3,12 +3,25 @@
 }
 
 body {
+  background-color: #404040;
+  background-image: url(images/texture.png);
   font-family: sans-serif;
   margin: 40px 0;
 }
 
+html[dir='ltr']
+.toolbar, .secondaryToolbar {
+  box-shadow: inset 1px 0 0 hsla(0,0%,100%,.08),
+              inset 0 1px 1px hsla(0,0%,0%,.15),
+              inset 0 -1px 0 hsla(0,0%,100%,.05),
+              0 1px 0 hsla(0,0%,0%,.15),
+              0 1px 1px hsla(0,0%,0%,.1);
+}
+
 .toolbar {
-  background-color: #eaeaea;
+  background-color: #424242;
+  background-image: url(images/texture.png), linear-gradient(hsla(0,0%,30%,.99), hsla(0,0%,25%,.95));
+  /*background-color: #eaeaea;*/
   border-bottom: 1px solid #d0d0d0;
   height: 35px;
   position: fixed;
@@ -35,7 +48,9 @@ body {
 }
 
 .toolbar button {
-  background-color: #eaeaea;
+  color: hsla(0,0%,100%,.8);
+  background: none;
+  /*background-color: #eaeaea;*/
   border: 1px solid transparent;
   border-radius: 3px;
   font-size: 15px;
