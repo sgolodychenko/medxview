@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px 0;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+.toolbar {
+  background-color: #eaeaea;
+  border-bottom: 1px solid #d0d0d0;
+  height: 35px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 5px;
+  text-shadow: 1px 1px 0 #fff;
+  z-index: 100;
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1);
+     -moz-box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1);
+          box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,1);
+}
+.toolbar .spacer {
+  display: inline-block;
+  border-left: 1px solid #c1c1c1;
+  height: 34px;
+  margin: 0 5px -11px;
+}
+
+.toolbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toolbar button {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 3px;
+  padding-top: 1px;
+  margin: 0;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  position: relative;
+  width: 27px;
+  height: 27px;
+}
+.toolbar button:after {
+  content: ' ';
+  display: block;
+}
+.toolbar button.active {
+  border-color: #bababa;
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.25);
+     -moz-box-shadow: inset 0 0 1px rgba(0,0,0,0.25);
+          box-shadow: inset 0 0 1px rgba(0,0,0,0.25);
+}
+.toolbar button:hover,
+.toolbar button:focus {
+  border-color: #bababa;
+}
+
+.toolbar button.pen {
+  font-size: 16px;
+}
+
+.toolbar button.comment {
+  font-size: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 0 #000000;
+}
+
+.toolbar button.rectangle:after {
+  width: 15px;
+  height: 15px;
+  border: 1px solid red;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.toolbar button.highlight:after {
+  width: 17px;
+  height: 17px;
+  background: yellow;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.toolbar button.strikeout:after {
+  width: 15px;
+  height: 1px;
+  background: red;
+  position: absolute;
+  top: 12px;
+  left: 4px;
+}
+
+.toolbar button.text:after {
+  content: 'T';
+  font-family: 'Times New Roman';
+}
+
+.color {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  vertical-align: middle;
+}
+.color-selected {
+  border: 3px solid #666;
+  width: 30px;
+  height: 30px;
+  margin-top: -1px;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.text-color, .pen-color {
+  display: inline-block;
+}
+#annotationmarker{
+	display: inline-block;
+}
+#annotationmarker .vv_notepad_content{
+	margin: 0px;
+    min-height: 0px;
+}
+#annotationmarker .vv_menu_button > div{
+	margin-top: -5px;
+}
+
+
+.mdx_grp_btn {
+    background: #e3e3e3;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.mdx_icon_add_annotate {
+    background-position: -2px -82px;
+}
+.mdx_icon_strike_out {
+    background-position: -2px -102px;
+}
+.mdx_icon_pan {
+    background-position: -2px -122px;
+}
+.mdx_btn_icon {
+    background-color: transparent;
+    background-image: url("../img/annotate-sprite.png");
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 2px 0;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.mdx_annotation_container{
+	display: inline-block;
+}
+
+.mdx_grp_btn{
+	margin-top: -3px;
+}
+button.StrikeOut,button.Pan{
+	margin-left: -4px;
+}
+
+.toolbar span.vv_caret_down {
+    margin-left: 6px !important;
+}
+
+.toolbar span.text.vv_pick_indicator.vv_icon_highlight {
+    margin-left: -2px;
+}
+
+.btnactive{
+	background-color: #928D8D !important;
+}
+
+.mdx_color_swatch {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.mdx_dropdown_menu.mdx_color_menu {
+    line-height: 18px;
+    padding: 5px 0 0 5px;
+    width: 161px;
+    white-space: normal;
+}
+.mdx_dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3991;
+    display: none;
+    float: left;
+    font-size: 12px;
+    list-style: none;
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    text-align: left;
+}
+
+.mdx_grp_btn+.mdx_grp_btn {
+    margin-left: 5px;
+}
+.mdx_grp_btn {
+    background: #e3e3e3;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.mdx_dropdown_menu li>a, .mdx_dropdown_menu li>label {
+    display: block;
+    padding: 3px 20px 3px 5px;
+    clear: both;
+    font-weight: normal;
+    line-height: 16px;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+}
+
+.mdx_line_selector .mdx_line {
+    background: #666;
+    display: inline-block;
+    height: 3px;
+    line-height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.mdx_line_selector .mdx_dropdown_menu a {
+    padding: 3px 2px;
+}
+
+.open {
+    *z-index: 1000
+}
+
+.open>.mdx_dropdown_menu {
+    display: block;
+    min-width: 50px;
+}
+
+.mdx_dropdown_menu.mdx_color_menu li {
+    display: inline-block;
+    width: 20px;
+}
+
+.mdx_dropdown_menu.mdx_color_menu li a >span:hover {
+    border: 1px solid #aaa
+}
+
+.LineWidthMenu.mdx_dropdown_menu li a:hover{
+	border: 1px solid #aaa
+}
+
+ul.LineWidthMenu.mdx_dropdown_menu{
+	padding: 3px;
+}
+
+#annotationDlg .vv_notepad_content > div{
+	display: inline-block;
+}

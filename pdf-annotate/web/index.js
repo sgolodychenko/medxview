@@ -22,7 +22,7 @@ document.getElementById('content-wrapper').addEventListener('scroll', function (
   let visiblePage = document.querySelector(`.page[data-page-number="${visiblePageNum}"][data-loaded="false"]`);
   if (visiblePage) {
     setTimeout(function () {
-      UI.renderPage(visiblePageNum, ж);
+      UI.renderPage(visiblePageNum, RENDER_OPTIONS);
     });
   }
 });

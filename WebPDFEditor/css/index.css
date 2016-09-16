@@ -1,0 +1,173 @@
+body {
+  background-color: #eee;
+  margin: 0;
+}
+
+.pdfViewer .canvasWrapper {
+  box-shadow: 0 0 3px #bbb;
+}
+
+.annotationLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#content-wrapper {
+  top: 35px;
+  left: 0;
+  right: 250px;
+  bottom: 0;
+  overflow: auto;
+}
+
+#comment-wrapper {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 250px;
+  background: #eaeaea;
+  border-left: 1px solid #d0d0d0;
+}
+#comment-wrapper h4 {
+  margin: 10px;
+}
+#comment-wrapper .comment-list {
+  font-size: 12px;
+  top: 38px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#comment-wrapper .comment-list-item {
+  border-bottom: 1px solid #d0d0d0;
+  padding: 10px;
+}
+#comment-wrapper .comment-list-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 47px;
+  overflow: auto;
+}
+#comment-wrapper .comment-list-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+#comment-wrapper .comment-list-form input {
+  padding: 5px;
+  width: 100%;
+}
+
+.ui-autocomplete {
+  height: 100px
+  min-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1020 !important;
+}
+
+div#div-annoation-tags,div#div-annoation-rvs {
+    margin-bottom: 4px;
+}
+
+span.spantags,span.spanrvs {
+    padding: 2px 4px 2px 4px;
+    background-color: #DFDFDF;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+i.fa.fa-times-circle {
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.addTag i.fa.fa-cog {
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.vv_tags_btn{
+	padding: 6px 0px;
+}
+.vv_btn{
+	background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0 6px;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #d3d3d3;
+    background-image: linear-gradient(to bottom, #dbdbdb, #d3d3d3);
+    box-shadow: none;
+    color: #555;
+    outline: 0;
+    z-index: 2;
+}
+
+#manageTagsDlg .tagslist{
+	min-height: 400px;
+    width: 370px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+#manageTagsDlg .addTag .inputtags{
+	width: 370px;
+    margin-top: 5px;
+}
+
+.tagslist span {
+    display: block;
+    width: 98%;
+    background: #DDDDDD;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    line-height: 25px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.tagslist span i {
+    float: right;
+    line-height: 25px;
+    padding-right: 5px;
+}
+
+.selectedtag{
+	border: 1px solid #00FF00;
+    background: #DDFFDD !important;
+}
+
+.opacity65{
+	opacity: .65;
+	cursor: not-allowed;
+}
+
+@media screen and (min-width: 768px){
+	.modal-dialog{
+		width: 350px;
+	}
+}
+
+.modal-header,.modal-body,.modal-footer{
+	padding: 5px 15px 5px 15px;
+}
+
+.btn{
+	padding: 3px 6px;
+}
