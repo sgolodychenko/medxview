@@ -15,3 +15,6 @@ web-service/target/
 jodconverter/jodconverter-web-service/target/
 delme/web-service/target/**
 .metadata/
+C#/DOC2PDF/bin/*
+C#/DOC2PDF/obj/*
+C#/packages/*

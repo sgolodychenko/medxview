@@ -30,7 +30,15 @@ public class WhenConvertingDocumentTest {
 
     @Test
     public void ShouldConvertXdocToPdf() throws Exception{
-        File f = new File("D:\\Projects\\Delk\\medxview.docs\\DocxBig.docx");
+        ConvertXdocToPdf("D:\\Projects\\Delk\\medxview.docs\\DocxBig.docx");
+        ConvertXdocToPdf("D:\\Projects\\Delk\\sources\\medxview\\sample\\AL3818-US-002-ComboTherapy_CP_v-2.docx");
+        ConvertXdocToPdf("D:\\Projects\\Delk\\sources\\medxview\\sample\\cover-letter.docx");
+        ConvertXdocToPdf("D:\\Projects\\Delk\\sources\\medxview\\sample\\example table border line.docx");
+        ConvertXdocToPdf("D:\\Projects\\Delk\\sources\\medxview\\sample\\example TOC is not convert.docx");
+    }
+
+    private void ConvertXdocToPdf(String path) throws Exception {
+        File f = new File(path);
         FileInputStream fi = new FileInputStream(f);
         MockMultipartFile secmp = new MockMultipartFile("file", f.getName(),"multipart/form-data",fi);
         mockMvc.perform(fileUpload("/convert/xdoc")
